@@ -1,0 +1,35 @@
+"""
+My solution (Not recommended.....)
+"""
+class Solution:
+    def duplicateZeros(self, arr: List[int]) -> None:
+        """
+        Do not return anything, modify arr in-place instead.
+        """
+        new_arr = arr.copy()
+        a = 0 
+        for i in range(len(new_arr)):
+            if new_arr[i] == 0:
+                for j in range(i,len(new_arr)-1):
+                    try:
+                        arr[a+j+1] = new_arr[j]
+                    except IndexError:
+                        continue
+                a += 1
+    #很朴素的思想，duplicate一次即把0后面的都向后移一位，每duplicate一次，下一次要多移一位
+    
+    
+ """
+ Other Solutions
+ """
+ new_arr = []
+ 
+ for num in arr:
+   new_array.append(num)
+   if num == 0:
+     new_arr.append(num)   #先不管长度，是0就复制一遍
+     
+   for x in range(len(arr)):
+     arr[x] = new_arr[x]   #选取与原长度相等的
+   
+   
