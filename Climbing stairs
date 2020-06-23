@@ -19,6 +19,7 @@ class Solution:
             dp[i] = dp[i-1] + dp[i-2]
         return dp[n]
 
+# https://leetcode-cn.com/problems/climbing-stairs/solution/pa-lou-ti-by-leetcode-solution/
 # 还是DP，只不过是只存储前两个元素，减少了空间，空间复杂度O(1)
 class Solution:
     def climbStairs(self, n: int) -> int:
