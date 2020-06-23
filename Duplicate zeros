@@ -27,7 +27,7 @@ class Solution:
  for num in arr:
    new_array.append(num)
    if num == 0:
-     new_arr.append(num)   #先不管长度，是0就复制一遍
+     new_arr.append(num)   #先不管长度，是0就复制一遍; 因为append是在当时的list的最后append，所以循环到0就在0后加，没毛病
      
    for x in range(len(arr)):
      arr[x] = new_arr[x]   #选取与原长度相等的
